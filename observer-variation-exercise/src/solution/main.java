@@ -13,9 +13,9 @@ public class main {
 		exercise.subscribe(georgiFitnessEnthusiast);
 		exercise.subscribe(petarFitnessEnthusiast);
 		
+		System.out.println();
 		exercise.setExercise("Bench Press");
-		exercise.setExercise("Leg Press");
-		exercise.setExercise("Squats");
+		System.out.println();
+		exercise.setExercise("Leg Press");	
 	}
-
 }
