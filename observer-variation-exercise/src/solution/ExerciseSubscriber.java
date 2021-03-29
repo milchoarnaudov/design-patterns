@@ -10,12 +10,12 @@ public class ExerciseSubscriber implements Observer {
 	
 	@Override
 	public void update() {
-		if(exercise == null) {
+		if(this.exercise == null) {
 			System.out.println(this.getName() + " is not doing an exercise");
 			return;
 		}
 		
-		String newExercise = exercise.getUpdate();
+		String newExercise = this.exercise.getUpdate();
 		System.out.println(this.getName() + ": has to do a new exercise: " + newExercise);
 
 	}
