@@ -1,5 +1,9 @@
 package solution;
 
+import solution.Commands.Command;
+import solution.Commands.StandUpCommand;
+import solution.Commands.LayDownCommand;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -13,6 +17,15 @@ public class Main {
 		trainee.subscribe(secondOnlineTrainee);
 		trainee.subscribe(thirdOnlineTrainee);
 		
+		FitnessInstructor fitnessInstructor = new FitnessInstructor();
+		
+		Command standUp = new StandUpCommand(trainee);
+		Command layDown = new LayDownCommand(trainee);
+		
+		fitnessInstructor.setCommand(standUp);
+		fitnessInstructor.giveExercise();
+		fitnessInstructor.setCommand(layDown);
+		fitnessInstructor.giveExercise();
 	}
 
 }
