@@ -41,6 +41,8 @@ public class Trainee implements Observable {
 
 	public void setExercise(String exercise) {
 		this.exercise = exercise;
+		System.out.println("The trainee started doing " + exercise + " given by the Fitness Instructor");
 		this.notifyObservers();
+		System.out.println();
 	}
 }

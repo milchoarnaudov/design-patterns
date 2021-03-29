@@ -2,8 +2,8 @@ package solution;
 
 public class TraineeSubscriber implements Observer {
 	private String name;
-	Observable trainee;
-	String currentExercise;
+	private Observable trainee;
+	private String currentExercise;
 	
 	public TraineeSubscriber(String name) {
 		this.setName(name);

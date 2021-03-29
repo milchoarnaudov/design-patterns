@@ -10,6 +10,7 @@ public class FitnessInstructor {
 	}
 	
 	public void giveExercise() {
+		System.out.println("The Fitnes Intructor gave a new exercise - " + this.currentCommand.getCommandName());
 		this.currentCommand.execute();
 	}
 	

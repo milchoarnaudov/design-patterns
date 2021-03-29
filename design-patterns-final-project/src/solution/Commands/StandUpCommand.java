@@ -3,16 +3,30 @@ package solution.Commands;
 import solution.Trainee;
 
 public class StandUpCommand implements Command {
-	Trainee trainee;
+	private Trainee trainee;
+	private String exercise;
 	
 	public StandUpCommand(Trainee trainee) {
 		this.trainee = trainee;
+		this.setExercise("Stand up");
 	}
 	
 	@Override
 	public void execute() {
-		String exercise = "Stand up";
-		this.trainee.setExercise(exercise);
+		this.trainee.setExercise(getExercise());
+	}
+
+	public String getExercise() {
+		return exercise;
+	}
+
+	private void setExercise(String exercise) {
+		this.exercise = exercise;
+	}
+
+	@Override
+	public String getCommandName() {
+		return this.getExercise();
 	}
 
 }
