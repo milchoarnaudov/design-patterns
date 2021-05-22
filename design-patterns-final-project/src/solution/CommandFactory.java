@@ -8,7 +8,7 @@ import solution.Commands.Command;
 import solution.Commands.LayDownCommand;
 import solution.Commands.StandUpCommand;
 
-public class CommandFactory extends AbstractFactory {
+public class CommandFactory {
 	private List<TraineeSubscriber> traineeSubscribers;
 	private Trainee trainee;
 	
@@ -20,8 +20,7 @@ public class CommandFactory extends AbstractFactory {
 		this.subscribeOnlineTraineesToTrainee();
 	}
 	
-	@Override
-	Command getCommand(String command) {
+	Command createCommand(String command) {
 		try {
 			String path = "solution.Commands.";
 			return (Command) Class.forName(path + command).getConstructor(Trainee.class).newInstance(this.trainee);
